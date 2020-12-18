@@ -6,6 +6,5 @@ db = SQLAlchemy(os.getenv("DATABASE_URL", "sqlite:///localhost.sqlite"))  # this
 
 class User(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    name = db.Column(db.String, unique=True)
-    email = db.Column(db.String, unique=True)
-
+    name = db.Column(db.String, unique=True)  # a username must be unique!
+    email = db.Column(db.String, unique=True)  # email must be unique!
